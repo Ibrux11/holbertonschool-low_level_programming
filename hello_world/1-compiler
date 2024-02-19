@@ -1,2 +1,2 @@
 #!/bin/bash
-g++ -c $CFILE -o 
+g++ -c $CFILE -o .o
