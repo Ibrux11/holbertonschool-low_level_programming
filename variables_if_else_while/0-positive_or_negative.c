@@ -10,7 +10,7 @@ int main(void)
 {
 int n;
 srand(time(0));
-nn = rand() - RAND_MAX /2;
+n = rand() - RAND_MAX /2;
 
 printf("The number is: %d\n", n);
 
