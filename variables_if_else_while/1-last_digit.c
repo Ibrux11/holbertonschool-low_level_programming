@@ -14,13 +14,13 @@ int main(void)
 	a = n % 10;
 
 
-	if (n > 5)
+	if (a > 5)
 	{
 		printf("Last digit of %d and is %d greater than 5\n", n, a);
 	}
-	else if (n == 5)
+	else if (a == 5)
 	{
-		printf("Last digit of %d and is %d 5\n", n, a);
+		printf("Last digit of %d and is %d 0\n", n, a);
 	}
 	else
 	{
