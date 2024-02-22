@@ -4,6 +4,7 @@
 *         except q and e.
 *  Return: Always 0
 */
+
 int main(void)
 {
 	char c = 'a';
@@ -12,9 +13,8 @@ int main(void)
 	{
 		if (c != 'q' && c != 'e')
 			putchar(c);
-		}
-		c++;
 	}
+		c++;
 	putchar('\n');
 
 	return (0);
