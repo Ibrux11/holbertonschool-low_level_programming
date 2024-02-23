@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
-*   print_alphabet - Prints the alphabet lowercase followed
+*   print_alphabet_x10 - Prints the alphabet lowercase 10 times followed
 *                    by a new line
 *  Return: Always 0
 */
