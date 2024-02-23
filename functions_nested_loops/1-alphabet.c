@@ -2,7 +2,8 @@
 #include <unistd.h>
 
 /**
-*  main - Prints the alphabet lowercase followed by a new line
+*  print_alphabet - Prints the alphabet lowercase followed
+*                   by a new line
 *  Return: Always 0
 */
 
