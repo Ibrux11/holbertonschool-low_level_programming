@@ -3,9 +3,9 @@
 
 /**
 * print_sign - Prints the sign of a number
-* n: the number who is check
+* @n: parameter to check
 *
-* Return: 1 if n is greater than zero, 0 if n is zero,
+Return: 1 if n is greater than zero, 0 if n is zero,
 *         -1 if n is less than zero
 */
 
