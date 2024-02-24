@@ -1,4 +1,5 @@
-#include"main.h"
+#include "main.h"
+
 /**
  * print_last_digit - Print the last digit of a number
  * @n: reference number
@@ -6,6 +7,7 @@
  * Return: n % 10 if n >= 0
  *        -n if n < 0
  */
+
 int print_last_digit(int n)
 
 {
