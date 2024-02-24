@@ -3,7 +3,7 @@
 
 /**
 * print_sign - Prints the sign of a number
-* n: The number to be checked
+* n: the number who is check
 *
 * Return: 1 if n is greater than zero, 0 if n is zero,
 *         -1 if n is less than zero
