@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include ""
 
 /**
 * print_sign - Prints the sign of a number
@@ -16,12 +16,12 @@ int print_sign(int n)
 	}
 	else if (n == 0)
 	{
-		putchar('0');
+		printf('0');
 		return (0);
 	}
 	else
 	{
-		putchar('-');
+		printf('-');
 		return (-1);
 	}
 }
