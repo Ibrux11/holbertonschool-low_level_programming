@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
-* mul - multiplie deux entiers
-* @a: premier entier
-* @b: deuxième entier
+* mul - multiplie deux entiers.
+* @a: premier entier.
+* @b: deuxième entier.
 *
 * Retourne: le résultat de la multiplication
 */
