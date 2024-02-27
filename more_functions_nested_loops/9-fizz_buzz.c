@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+*    main - int
+*	 Return: Always 0
+*/
 
 int main(void)
 {
@@ -10,7 +14,7 @@ int main(void)
 		{
 			printf("FizzBuzz");
 		}
-		 else if (i % 3 == 0)
+		else if (i % 3 == 0)
 		{
 			printf("Fizz");
 		}
@@ -18,7 +22,7 @@ int main(void)
 		{
 			printf("Buzz");
 		}
-		 else
+		else
 		{
 			printf("%d", i);
 		}
