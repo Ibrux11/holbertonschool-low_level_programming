@@ -1,7 +1,7 @@
 
 #include "main.h"
 /**
- mul - multiplie deux entiers.
+* mul - multiplie deux entiers.
 * @a: premier entier.
 * @b: deuxième entier.
 *
