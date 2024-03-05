@@ -3,12 +3,12 @@
 
 
 /*
-*  char *_memset - Fills the first n bytes of the memory area pointed
-*	to by s with the constant byte b.
-*  @param s: Pointer to the start of the memory area
+*   char *_memset(char *s, char b, unsigned int n) - Function that
+*	fills memory with a constant byte.
+*   @param s: Pointer to the start of the memory area
 *   @param b: Constant byte to fill the memory area with
 *   @param n: Number of bytes to fill
-*   @return A pointer to the start of the filled memory area
+*   @return s pointer to the start of the filled memory area
 */
 
 
