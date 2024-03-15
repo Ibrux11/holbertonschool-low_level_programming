@@ -32,3 +32,19 @@ int main(void)
 	free(d);
 	return (0);
 }
+concat_len = s1_len + n;
+
+	concat = malloc(sizeof(char) * (concat_len + 1));
+	if (concat == NULL)
+		return (NULL);
+
+	ptr = concat;
+
+	while (*s1)
+		*ptr++ = *s1++;
+	while (n-- > 0)
+		*ptr++ = *s2++;
+	*ptr = '\0';
+
+	return (concat);
+}
