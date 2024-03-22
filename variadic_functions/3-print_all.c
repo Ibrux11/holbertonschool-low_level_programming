@@ -54,17 +54,32 @@ void print_all(const char * const format, ...)
 
 	char *sep = "";
 
-	print_handler_t print_handler;
-
 	va_start(args, format);
 
 	while (format && format[i])
 	{
-		print_handler = get_print_handler(format[i]);
-		if (print_handler)
+		if (format[i] == 'c')
 		{
 			printf("%s", sep);
-			print_handler(args);
+			print_char(args);
+			sep = ", ";
+		}
+		else if (format[i] == 'i')
+		{
+			printf("%s", sep);
+			print_integer(args);
+			sep = ", ";
+		}
+		else if (format[i] == 'f')
+		{
+			printf("%s", sep);
+			print_float(args);
+			sep = ", ";
+		}
+		else if (format[i] == 's')
+		{
+			printf("%s", sep);
+			print_string(args);
 			sep = ", ";
 		}
 		i++;
