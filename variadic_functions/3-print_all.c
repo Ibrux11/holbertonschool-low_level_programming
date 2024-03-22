@@ -1,51 +1,87 @@
-#include <stdarg.h>
+#include "variadic_functions.h"
 #include <stdio.h>
+#include <stdarg.h>
+
+/**
+* print_char - prints a character
+* @args: the list of arguments
+*/
+void print_char(va_list args)
+{
+	printf("%c", va_arg(args, int));
+}
+
+/**
+* print_integer - prints an integer
+* @args: the list of arguments
+*/
+void print_integer(va_list args)
+{
+	printf("%d", va_arg(args, int));
+}
+
+/**
+* print_float - prints a float
+* @args: the list of arguments
+*/
+void print_float(va_list args)
+{
+	printf("%f", va_arg(args, double));
+}
+
+/**
+* print_string - prints a string
+* @args: the list of arguments
+*/
+void print_string(va_list args)
+{
+	char *str = va_arg(args, char *);
+
+	if (str == NULL)
+		printf("(nil)");
+	else
+		printf("%s", str);
+}
 
 /**
 * print_all - prints anything
 * @format: list of types of arguments passed to the function
-*
-* Return: void
 */
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	unsigned int i = 0;
+	char *separator = "";
 
-	char *str;
+	unsigned int i = 0, j = 0;
 
-	char c;
+	print_t print[] = {
+		{"c", print_char},
+		{"i", print_integer},
+		{"f", print_float},
+		{"s", print_string},
+		{NULL, NULL}
+	};
 
 	va_start(args, format);
+
 	while (format && format[i])
 	{
-	c = format[i];
-	switch (c)
-	{
-			case 'c':
-				printf("%c", va_arg(args, int));
+		j = 0;
+		while (print[j].specifier)
+		{
+			if (format[i] == print[j].specifier[0])
+			{
+				printf("%s", separator);
+				print[j].printer(args);
+				separator = ", ";
 				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				printf("%f", (float)va_arg(args, double));
-				break;
-			case 's':
-				str = va_arg(args, char *);
-				if (str != NULL)
-					printf("%s", str);
-				else
-					printf("(nil)");
-				break;
-			default:
-				break;
-	}
-	if ((format[i + 1] != '\0') && (c == 'c' || c == 'i' || c == 'f' || c == 's'))
-			printf(", ");
+			}
+			j++;
+		}
 		i++;
 	}
+
 	printf("\n");
+
 	va_end(args);
 }
-
